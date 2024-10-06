@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientist Adventure</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #e3f2fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .visible {
+            display: block;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            color: #42a5f5;
+        }
+
+        .text-content {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            color: #1e95e5;
+        }
+
+        .button {
+            background-color: #42a5f5;
+            color: white;
+            border: none;
+        
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #1e88e5;
+        }
+
+        .fingerprint-area {
+            margin: 20px 0;
+            border: 2px dashed #42a5f5;
+            padding: 20px;
+            color: #42a5f5;
+        }
+
+        .congrats {
+            color: green;
+        }
+
+        .final-statement {
+            color: purple;
+            font-size: 1.4rem;
+            margin-top: 20px;
+        }
+
+        @keyframes letter-typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        .letter-typed {
+            font-family: 'Courier New', Courier, monospace;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid;
+            width: 100%;
+            display: inline-block;
+            animation: letter-typing 4s steps(40, end);
+        }
+        #globeImage {
+            margin-top: 20px;
+            max-width: 100%;
+            max-height: 300px;
+        }
+
+        ul{
+            text-align: left;
+            color: #9d0f6e;
+        }
+        #play-again {
+    display: block;
+    margin: 20px auto; /* Center the button */
+    padding: 10px 20px; /* Increase padding for a bigger button */
+    font-size: 20px; /* Larger font size */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+#play-again:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+    </style>
+</head>
+<body>
+    <div class="container" id="promisePage">
+        <p>Fun fact: Review and Reflect can boost Creativity</p>
+        <button class="button" id="nextToReflection">Next</button>
+    </div>
+    <div class="container" id="reflectionPage">
+        <h1 class="title">Reflection</h1>
+        <p> What did you do in the game?</p>
+        <ul>
+            <li>Developed empathy for the fishy.</li>
+            <li>Observed the water with sensory organs.</li>
+            <li>Did a pH meter experiment to determine the water’s pH level.</li>
+            <li>Picked up the trash from the water.</li>
+            <li>Promised to keep water clean.</li>
+        </ul>
+        <button class="button" id="nextToCompletion">Next</button>
+    </div>
+
+    <div class="container" id="completionPage">
+        <h1 class="text-content congrats">Congratulations!</h1>
+        <p class="text-content congrats">You have successfully completed the game.</p>
+        <p>You have completed all the steps of the Scientific Process given by GLOBE</p>
+        <img id="globeImage" src="WhatsApp Image 2024-10-06 at 22.38.19_1c059eee.jpg" alt="globe scientic process Image">
+        <button class="button" id="nextToScientist">Next</button>
+    </div>
+
+    <div class="container" id="scientistPage">
+        <h1 class="title">Can You Be a Scientist?</h1>
+        <p class="letter-typed">Why don't you find the answers to these questions?</p>
+        <p>1. Why is clean water important for plants, animals, and humans?<br>
+            2. What would happen if everyone made a promise to keep our water clean?</p>
+        <p class="final-statement">Next Scientist Adventure Coming Soon!</p>
+        <button id="play-again">Play Again</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let promisePage = document.getElementById("promisePage");
+            let reflectionPage = document.getElementById("reflectionPage");
+            let completionPage = document.getElementById("completionPage");
+            let scientistPage = document.getElementById("scientistPage");
+
+            promisePage.classList.add("visible");
+
+            // Move to reflection page
+            document.getElementById("nextToReflection").addEventListener("click", function () {
+                promisePage.classList.remove("visible");
+                reflectionPage.classList.add("visible");
+            });
+
+            // Move to completion page
+            document.getElementById("nextToCompletion").addEventListener("click", function () {
+                reflectionPage.classList.remove("visible");
+                completionPage.classList.add("visible");
+            });
+
+            // Move to scientist page
+            document.getElementById("nextToScientist").addEventListener("click", function () {
+                completionPage.classList.remove("visible");
+                scientistPage.classList.add("visible");
+                document.getElementById("play-again").onclick = function() {
+        // Redirect to next question or level
+        window.location.href = "level0.html"; // Change this to your next level page
+    };
+            });
+        });
+    </script>
+</body>
+</html>

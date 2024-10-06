@@ -1,0 +1,109 @@
+/* Basic Body Styling */
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #e3f2fd;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Yes Button */
+.yes-button {
+    background-color: #ffeb3b;
+    color: #333;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.yes-button:hover {
+    background-color: #ffc107;
+}
+
+/* Agreement Page */
+.agreement-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.pledge-list {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.pledge-list li {
+    font-size: 1.2rem;
+    color: #27679c;
+}
+
+/* Fingerprint Area */
+.fingerprint-area {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.fingerprint-box {
+    width: 100px;
+    height: 100px;
+    border: 2px dashed #42a5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    border-radius: 50%;
+    position: relative;
+}
+
+#pressFingerText {
+    color: #1e88e5;
+}
+
+#fingerprint {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.fingerprint-animate {
+    background-color: #1e88e5;
+    animation: fingerprintPop 0.7s forwards;
+}
+
+@keyframes fingerprintPop {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+/* Final Message */
+.final-message {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}

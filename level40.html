@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quality Pledge</title>
+    <link rel="stylesheet" href="level40.css">
+</head>
+<body>
+    <div class="container" id="questionContainer">
+        <h1>What did you learn?</h1>
+        <p>Not to throw waste into water.</p>
+        <p>Can you make a promise to your fishy?</p>
+        <button class="yes-button" id="yesButton">Yes</button>
+    </div>
+
+    <!-- Agreement Page -->
+    <div class="agreement-container hidden" id="agreementContainer">
+        <h2>Water Quality Pledge</h2>
+        <p>I promise to protect our water!</p>
+        <p>I promise</p><br>
+        <ul class="pledge-list">
+            <li>not to throw trash into water.</li>
+            <li>to teach others about keeping water clean.</li>
+            <li>to plant more trees</li>
+            <li>to use less plastic</li>
+        </ul>
+
+        <div class="fingerprint-area" id="fingerprintArea">
+            <p>Press your finger to sign the pledge:</p>
+            <div class="fingerprint-box">
+                <p id="pressFingerText">Press Finger</p>
+                <div id="fingerprint"></div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Final Message -->
+     <div class="final-message hidden" id="finalMessage">
+        <p>You promised! Remember your promise always. The fishy believes in you.</p>
+        <button class="yes-button" id="nextPageButton">Deal</button>
+    </div>
+
+
+    <script src="level40.js"></script>
+</body>
+</html>
