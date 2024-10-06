@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acidic Nature Quiz</title>
+    <link rel="stylesheet" href="level30.css">
+</head>
+<body>
+    <div class="container" id="questionContainer">
+        <h1>Oh, it's acidic in nature. Can you guess what can be the reason?</h1>
+        <div class="options">
+            <button class="option" id="optionA">A. Industries Waste</button>
+            <button class="option" id="optionB">B. Fish</button>
+        </div>
+        <div id="factBox" class="fact-box hidden">
+            <h3 style = "color: green;">Good job! You are genius!</h3>
+            <h4 style = "color: rgb(160, 28, 109);"> Interesting Fact</h4>
+            <p>Sometimes, the rain that falls can be sour or acidic.</p>
+            <button id="knowWhyBtn">Wanna Know Why</button>
+            <p id="reasonText" class="hidden">This happens when the air gets polluted by factories and cars, making the rain mix with bad stuff. When this rain falls into ponds, it can make the water sour.</p>
+        </div>
+    </div>
+
+    <!-- The following will be displayed on the next page after transition -->
+    <div class="next-page hidden" id="nextPage">
+        <p id="letterText"></p>
+        <button id="enterLevel3Btn" class="hidden">Enter Level 3</button>
+    </div>
+
+    <script src="level30.js"></script>
+</body>
+</html>
+

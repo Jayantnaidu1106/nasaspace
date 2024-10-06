@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Quiz Game</title>
+    <link rel="stylesheet" href="level1.css">
+</head>
+<body>
+    <button class="back-btn" id="back-btn">Back</button>
+    <div id="level2Splash" class="level-splash">Level 1</div>
+
+    <!-- Opening message -->
+    <div id="opening-message" class="center-screen hidden">
+    <div class="quiz-container">
+        <h2 id="question">Which looks like water?</h2>
+
+        <p id="score">Score: 0</p>
+
+        <div class="image-options">
+            <img src="html/pond.jpeg" id="image1" class="option" alt="Option 1">
+            <img src="html/pollutedpond.jpg" id="image2" class="option" alt="Option 2">
+        </div>
+
+        <p id="feedback"></p>
+
+        <button id="next-btn" style="display:none;">Next Question</button>
+        
+        <button id="next-level-btn" style="display:none;">Play Next Level</button>
+
+        <div id="badge" style="display:none;">
+            <img src="eagle-eye-badge.png" alt="Eagle Eye Badge" class="badge-image">
+            <div class="badge-content">
+                <h3>Eagle Eye</h3>
+                <p>Congratulations! You are a wonderful observant!</p>
+            </div>
+        </div>
+
+        <!-- Back to Levels Button -->
+        
+    </div>
+
+    <script src="level1.js"></script>
+    <script>
+        // Show the splash screen for 2 seconds before starting the main content
+        window.onload = function() {
+            const splash = document.getElementById("level2Splash");
+            const openingMessage = document.getElementById("opening-message");
+            const notepad = document.getElementById("notepad");
+            const phTestSection = document.getElementById("ph-test-section");
+
+            // Hide the splash screen after 2 seconds
+            setTimeout(() => {
+                splash.classList.add("hidden");
+                openingMessage.classList.remove("hidden");
+                notepad.classList.remove("hidden");
+                phTestSection.classList.remove("hidden");
+            }, 2000); // 2-second delay
+        };
+    </script>
+</body>
+</html>

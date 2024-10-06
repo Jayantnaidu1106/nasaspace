@@ -1,0 +1,89 @@
+/* Basic Body Styling */
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #e3f2fd;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Option Buttons */
+.options {
+    margin-top: 20px;
+}
+
+.option {
+    background-color: #ffeb3b;
+    color: #333;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.option:hover {
+    background-color: #ffc107;
+}
+
+/* Fact Box */
+.fact-box {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#knowWhyBtn {
+    background-color: #42a5f5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#knowWhyBtn:hover {
+    background-color: #1e88e5;
+}
+
+/* Next Page */
+.next-page {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#enterLevel3Btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#enterLevel3Btn:hover {
+    background-color: #388e3c;
+}
